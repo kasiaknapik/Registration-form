@@ -1,0 +1,499 @@
+/* Styles go here */
+html {
+    font-size: 16px;
+    overflow: hidden;
+}
+
+body {
+    background-color: #242424;
+    font-size: 62.5%;
+    display: table;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    color: #353535;
+    overflow-y: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #1bfec0; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #1bfec0; /* Gecko Browsers */
+}
+
+label {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #dfdfe4;
+}
+
+::-moz-placeholder {
+    color: #dfdfe4;
+}
+
+:-ms-input-placeholder {
+    color: #dfdfe4;
+}
+
+:-moz-placeholder {
+    color: #dfdfe4;
+}
+
+.formContainer {
+    display: flex;
+    text-align: center;
+    background: transparent url("../img/bgBottom.png") no-repeat 100% 105%;
+    -ms-animation-name: bottomBg 5s;
+    animation: bottomBg 5s;
+    -moz-animation: bottomBg 5s;
+    -webkit-animation: bottomBg 5s;
+    height: 100%
+    }
+
+
+.formContainer .topBg {
+    position: absolute;
+    top:0;
+    left:0;
+    width:800px;
+    min-height:650px;
+    background: transparent url("../img/bgTop.png") no-repeat -20px 0;
+    background-size: contain;
+    -ms-animation-name: topBg 8s;
+    animation: topBg 8s;
+    -moz-animation: topBg 8s;
+    -webkit-animation: topBg 8s;
+
+}
+
+.content {
+    text-align: left;
+    margin: 0 auto;
+    width: 780px;
+    position: relative;
+    align-self: center;
+    height: 760px
+}
+
+.content .title {
+    margin-bottom: 30px;
+    margin-left: 375px;
+    font-size: 4.8em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.content .aside {
+    background: transparent url("../img/formBg.png") no-repeat 0 0;
+    background-size: cover;
+    width: 310px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 470px;
+    -ms-animation-name: leftSide 0.5s;
+    animation: leftSide  0.5s;
+    -moz-animation: leftSide  0.5s;
+    -webkit-animation: leftSide  0.5s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.content .aside .lines {
+    height: 100%;
+    width: 310px;
+    background: transparent url("../img/lines.png") no-repeat 20px 60px;
+    -ms-animation-name: lines 1s;
+    animation: lines  1s;
+    -moz-animation: lines  1s;
+    -webkit-animation: lines  1s;
+    overflow: hidden;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.content .form {
+    background: #fff;
+    background: -moz-linear-gradient(left, #1e5799 0%, #f8f9fb 0%, #f3f3f6 100%);
+    background: -webkit-linear-gradient(left, #1e5799 0%, #f8f9fb 0%, #f3f3f6 100%);
+    background: linear-gradient(to right, #1e5799 0%, #f8f9fb 0%, #f3f3f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#f3f3f6', GradientType=1);
+    position: absolute;
+    left: 310px;
+    top: 0;
+    height: 100%;
+    width: 470px;
+    -ms-animation-name: rightSide 1s;
+    animation: rightSide  1s;
+    -moz-animation: rightSide  1s;
+    -webkit-animation: rightSide  1s;
+    overflow: visible;
+    overflow-x: hidden;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.content #registerForm {
+    padding: 45px 50px;
+    width: 470px;
+    height: 100%;
+    position: relative;
+}
+
+.content .steps {
+    position: absolute;
+    left: 780px;
+    top: 110px;
+    width: 70px;
+}
+
+.content .steps .step {
+    height:87px;
+    border-top:2px solid #585858;
+    color:#585858;
+    width:25px;
+    position: relative;
+    -ms-animation-name: steps 1s;
+    animation: steps  1s;
+    -moz-animation: steps  1s;
+    -webkit-animation: steps  1s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.content .steps .step.active {
+    border-color:#1af5b9;
+    color:#fff
+}
+
+.content .steps .step .text {
+    position: absolute;
+    left:13px;
+    font-size: 1.1em;
+    top:13px;
+    width:70px;
+    -ms-animation-name: stepsText 1s;
+    animation: stepsText  1s;
+    -moz-animation: stepsText  1s;
+    -webkit-animation: stepsText  1s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.content .greenLine {
+    position: absolute;
+    width:70px;
+    height:2px;
+    background-color: #1bfec0;
+    left:360px;
+    top:-1px;
+    -ms-animation-name: greenLine 1s;
+    animation: greenLine  1s;
+    -moz-animation: greenLine  1s;
+    -webkit-animation: greenLine  1s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    z-index: 100;
+}
+
+.intro {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+
+/* forms */
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group .control-label {
+    position: absolute;
+    left: 15px;
+    top: -3px;
+    text-align: left;
+    padding-top: 0;
+    font-size: 1.1em;
+    color: #a2a2af;
+    font-weight: normal;
+}
+
+.form-group .formControl {
+    padding: 13px 15px;
+    border: 0;
+    border-bottom: 2px solid #dfdfe4;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1.6em;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.form-group .formControl:focus {
+    border-color: #531fc0;
+}
+
+/* select */
+.selectize-control.single {
+    font-size: 1.6em;
+    height: 58px;
+}
+
+.selectize-control.single .selectize-input {
+    border: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    padding: 13px 15px;
+    min-height: 50px;
+    border-bottom: 2px solid #dfdfe4 !important;
+    margin-top: 8px;
+    font-size:1em;
+    font-weight: 600;
+}
+
+.selectize-control.single.open .selectize-input {
+    border-color: #531fc0;
+}
+
+.selectize-control.single .selectize-input > input {
+    font-size: 1em;
+}
+
+.selectize-dropdown {
+    border: 2px solid #531fc0 !important;
+    top: 100%;
+    margin-top: -2px;
+}
+
+.selectize-control > .selectize-dropdown {
+    min-width: 200px;
+}
+
+.selectize-control > .selectize-dropdown .ui-select-choices-row:hover,
+.selectize-control > .selectize-dropdown .ui-select-choices-row.active {
+    background-color: #ece4fe;
+    color: #353535 !important;
+}
+
+.selectize-control.single .selectize-input:after {
+    border-color: #dfdfe4 transparent transparent transparent;
+    right:5px;
+}
+
+/* radio */
+.cbx {
+    position: relative;
+    margin: 25px 30px 0 0;
+    float: left;
+}
+
+.cbx input[type='radio'] {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+.cbx input[type='radio'] + span {
+    border: 2px solid #dfdfe4;
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 2.3em;
+    text-align: center;
+    height: auto;
+    padding: 6px 0;
+    color: #353535;
+}
+
+.cbx input[type='radio'] + span:after {
+    content: '.';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #dfdfe4;
+    color: #dfdfe4;
+    position: absolute;
+    top: 16px;
+    right: -9px;
+    background-color: #f8f8f9;
+    text-align: center;
+    line-height: 0;
+    font-size: 0.9em;
+}
+
+.cbx:hover input[type='radio'] + span {
+    border-color: #531fc0;
+}
+
+.cbx:hover input[type='radio'] + span:after {
+    border-color: #531fc0;
+    color: #531fc0;
+}
+
+.cbx input[type='radio']:checked + span {
+    border-color: #1cd4a3;
+}
+
+.cbx input[type='radio']:checked + span:after {
+    border-color: #1cd4a3;
+    color: #1cd4a3;
+}
+
+/* mobile */
+.mobileSet .phoneCode {
+    width: 115px;
+    margin-right: 15px;
+    float: left;
+}
+
+.mobileSet .phoneNumber {
+    margin-left: 130px;
+}
+
+/* birth */
+.birthSet {
+    margin-top: 22px;
+}
+
+.birthSet > div {
+    float: left;
+}
+
+.birthSet .birthDay {
+    width: 50px;
+}
+
+.birthSet .birthMonth,
+.birthSet .birthYear {
+    width: 130px;
+}
+
+.birthSet .separator {
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    color: #dfdfe4;
+    font-size: 2em;
+    line-height: 50px;
+}
+
+.birthSet .selectize-control.single {
+    height: 50px;
+}
+
+.birthSet .selectize-control.single .selectize-input:after {
+    display: none;
+}
+
+.birthSet .selectize-control.single .selectize-input {
+    border: 2px solid #dfdfe4 !important;
+    padding: 14px 15px;
+    margin-top: 0
+}
+
+.birthSet .birthDay .selectize-control.single .selectize-input {
+    padding: 14px 0;
+    text-align: center
+}
+
+.birthSet .birthDay .selectize-control.single .selectize-input > input {
+    text-align: center
+}
+
+.birthSet .selectize-control.single.open .selectize-input {
+    border-color: #531fc0 !important;
+}
+
+.birthSet .selectize-dropdown {
+    bottom:100%;
+    top: auto;
+    margin:0 0 -2px 0;
+}
+
+.birthSet .selectize-dropdown .selectize-dropdown-content {
+    max-height: 120px;
+}
+
+.birthSet .selectize-control > .selectize-dropdown {
+    min-width: 100px;
+}
+
+form {height:552px; position: relative}
+
+.submitButton {
+    width: 240px;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 590px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(left, #1e5799 0%, #8658eb 0%, #6830e2 100%);
+    background: -webkit-linear-gradient(left, #1e5799 0%, #8658eb 0%, #6830e2 100%);
+    background: linear-gradient(to right, #1e5799 0%, #8658eb 0%, #6830e2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#6830e2', GradientType=1);
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    -ms-animation-name: submitButton 1s;
+    animation: submitButton  1s;
+    -moz-animation: submitButton  1s;
+    -webkit-animation: submitButton  1s;
+    overflow-x: hidden;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.submitButton:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    content: " ";
+    display: inline-block;
+    background: #7841f4 url("../img/arrow.png") no-repeat 50% 50%;
+}
+
+.submitButton .text {
+    position: relative;
+    left:-25px
+}
+
+/* validation */
+.ng-submitted .ng-invalid,
+.ng-submitted .selectize-control.single.ng-invalid .selectize-input,
+.ng-submitted .cbx input[type='radio'].ng-invalid + span {
+    border-color: #ffb7b7 !important;
+}
+
+.ng-submitted .cbx input[type='radio'].ng-invalid + span:after {
+    border-color: #ffb7b7;
+    color: #ffb7b7;
+}
+
+.mobile {
+    display: none;
+}
+

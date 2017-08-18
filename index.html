@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/keyframes.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobile.css"/>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="formContainer">
+    <div class="topBg"></div>
+    <div class="content" data-ng-app="myApp" data-ng-controller="formCtrl as ctrl" data-ng-init="ctrl.init()">
+        <div class="title">Your account</div>
+        <form name="registerForm" novalidate>
+            <div class="greenLine"></div>
+            <div class="aside">
+                <div class="lines"></div>
+            </div>
+            <div class="form">
+                <div id="registerForm" novalidate>
+                    <div class="intro">Take it all with you. Switch between devices, and&nbsp;pick&nbsp;up.</div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-12 control-label" for="fullName">Your name</label>
+                            <div class="col-xs-12"><input type="text" id="fullName" class="formControl"
+                                                          data-ng-model="ctrl.user.fullName" required tabindex="1"/></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 control-label" for="phone">Mobile</label>
+                            <div class="col-xs-12 mobileSet">
+                                <div class="phoneCode">
+                                    <ui-select data-ng-model="ctrl.user.countryCode" theme="selectize" required>
+                                        <ui-select-match>{{$select.selected.dial_code}} ({{$select.selected.code}})
+                                        </ui-select-match>
+                                        <ui-select-choices repeat="country in ctrl.countries | filter: $select.search">
+                                            <span data-ng-bind-html="country.name | highlight: $select.search"></span>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                                <div class="phoneNumber">
+                                    <input placeholder="XXX XXX XXX" type="text" id="phone" class="formControl"
+                                           data-ng-model="ctrl.user.phone" ui-mask="999 999 999" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 control-label">Gender</label>
+                            <div class="col-xs-12">
+                                <label class="cbx">
+                                    <input type="radio" data-ng-model="ctrl.user.gender" value="Female" required/>
+                                    <span><i class="fa fa-venus" aria-hidden="true"></i></span>
+                                </label>
+                                <label class="cbx">
+                                    <input type="radio" data-ng-model="ctrl.user.gender" value="Male" required/>
+                                    <span><i class="fa fa-mars" aria-hidden="true"></i></span>
+                                </label></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12 control-label">Date of Birth</label>
+                            <div class="col-xs-12 birthSet">
+                                <div class="birthDay">
+                                    <ui-select data-ng-model="ctrl.user.birthDay" theme="selectize" required>
+                                        <ui-select-match placeholder="DD">{{$select.selected}}</ui-select-match>
+                                        <ui-select-choices repeat="day in ctrl.days | filter: $select.search">
+                                            <div data-ng-bind-html="day"></div>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="birthMonth">
+                                    <ui-select data-ng-model="ctrl.user.birthMonth" theme="selectize" required
+                                               on-select="ctrl.onSelectCallback($item)">
+                                        <ui-select-match placeholder="MM">
+                                            <div class="desktop">{{$select.selected.value.name}}</div>
+                                            <div class="mobile">{{$select.selected.value.short}}</div>
+                                        </ui-select-match>
+                                        <ui-select-choices
+                                                repeat="month.value.name as (key, month) in ctrl.months | filter: $select.search">
+                                            <div class="desktop" data-ng-bind-html="month.value.name"></div>
+                                            <div class="mobile" data-ng-bind-html="month.value.short"></div>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="birthYear">
+                                    <ui-select data-ng-model="ctrl.user.birthYear" theme="selectize" required>
+                                        <ui-select-match placeholder="YYYY">{{$select.selected}}</ui-select-match>
+                                        <ui-select-choices repeat="year in ctrl.years | filter: $select.search">
+                                            <div data-ng-bind-html="year"></div>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps">
+                <div class="step"><span class="text">01</span></div>
+                <div class="step active"><span class="text">02<br/>Personal</span></div>
+                <div class="step"><span class="text">03</span></div>
+            </div>
+            <button class="submitButton" data-ng-click="ctrl.send()"><span class="text">Continue</span></button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

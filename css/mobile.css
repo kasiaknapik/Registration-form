@@ -1,0 +1,172 @@
+@media (max-width: 900px) {
+
+    @keyframes leftSide {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 0;
+        }
+        100% {
+            width: 35%;
+        }
+    }
+
+    @keyframes rightSide {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 0;
+        }
+        100% {
+            width: 55%;
+        }
+    }
+
+    @keyframes lines {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    .content {
+        width: 96%;
+        max-width: 780px;
+    }
+
+    .content .aside {
+        width: 35%;
+        right: 65%
+    }
+
+    .content .steps {
+        left: 90%
+    }
+
+    .content .aside .lines {
+        width: 100%
+    }
+
+    .content .form {
+        width: 55%;
+        left: 35%
+    }
+
+    .content .form #registerForm {
+        width: 100%;
+        padding: 45px 40px
+    }
+
+    .submitButton {
+        left: 55%
+    }
+
+    .birthSet .birthMonth {
+        width: 50px
+    }
+
+    .birthSet .birthYear {
+        width: 100px;
+    }
+
+    .birthSet .birthMonth .selectize-control.single .selectize-input {
+        padding: 14px 0;
+        text-align: center
+    }
+
+    .birthSet .birthMonth .selectize-control.single .selectize-input > input {
+        text-align: center
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+}
+
+@media (max-width: 820px) {
+    .content .form #registerForm {
+        padding: 45px 30px
+    }
+}
+
+@media (max-width: 790px) {
+    .content .form #registerForm {
+        padding: 45px 20px
+    }
+}
+
+@media (max-width: 710px) {
+
+    @keyframes rightSide {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 0;
+        }
+        100% {
+            width: 80%;
+        }
+    }
+
+    .content .aside,
+    .content .steps {
+        display: none
+    }
+
+    .content .form {
+        left: 10%;
+        width: 80%
+    }
+
+    .content .title {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .submitButton {
+        width: 60%;
+        left: 20%
+    }
+
+    .form-group {
+        max-height: 80px;
+    }
+
+    .intro {
+        max-height: 40px;
+        overflow: hidden
+    }
+
+    .content .greenLine {
+        left:15%;
+    }
+}
+
+@media (max-height: 700px) {
+    .content .title {
+        top: 0;
+        margin-top: 20px;
+        margin-bottom: 30px
+    }
+
+    html {
+        overflow-y: auto
+    }
+
+    .content {
+        padding-bottom: 80px
+    }
+}

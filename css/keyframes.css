@@ -1,0 +1,111 @@
+@keyframes leftSide {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 310px;
+    }
+}
+
+@keyframes rightSide {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 470px;
+    }
+}
+
+@keyframes greenLine {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 70px;
+    }
+}
+
+@keyframes steps {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    75% {
+        width: 0;
+    }
+    100% {
+        width: 25px;
+    }
+}
+
+@keyframes stepsText {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes submitButton {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 240px;
+    }
+}
+
+@keyframes lines {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 310px;
+    }
+}
+
+@keyframes topBg {
+    from {
+        width:600px;
+        height:500px;
+    }
+    to {
+        width:800px;
+        height:550px;
+    }
+}
+
+@keyframes bottomBg {
+    from {
+        background-position-x: 180%;
+        background-position-y: 180%;
+    }
+    to {
+        background-position-x: 100%;
+        background-position-y: 105%;
+    }
+}

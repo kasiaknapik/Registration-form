@@ -1,0 +1,62 @@
+{
+  "1": {
+    "name": "January",
+    "short": "01",
+    "days": 31
+  },
+  "2": {
+    "name": "February",
+    "short": "02",
+    "days": 28
+  },
+  "3": {
+    "name": "March",
+    "short": "03",
+    "days": 31
+  },
+  "4": {
+    "name": "April",
+    "short": "04",
+    "days": 30
+  },
+  "5": {
+    "name": "May",
+    "short": "05",
+    "days": 31
+  },
+  "6": {
+    "name": "June",
+    "short": "06",
+    "days": 30
+  },
+  "7": {
+    "name": "July",
+    "short": "07",
+    "days": 31
+  },
+  "8": {
+    "name": "August",
+    "short": "08",
+    "days": 31
+  },
+  "9": {
+    "name": "September",
+    "short": "09",
+    "days": 30
+  },
+  "10": {
+    "name": "October",
+    "short": "10",
+    "days": 31
+  },
+  "11": {
+    "name": "November",
+    "short": "11",
+    "days": 30
+  },
+  "12": {
+    "name": "December",
+    "short": "12",
+    "days": 31
+  }
+}
